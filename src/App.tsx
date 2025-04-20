@@ -16,7 +16,7 @@ function App() {
     <>
       {!isLoaded && <LoadingScreen onCompleted={handleCompleted} />}
       <div
-        className={`min-h-screen bg-black text-gray-700 ${isLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-700`}
+        className={`min-h-screen text-gray-700 ${isLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-700`}
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
