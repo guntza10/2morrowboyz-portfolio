@@ -1,20 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 interface NavbarProps {
-  menuOpen: boolean;
-  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  onOpenMenu: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
-  useEffect(() => {
-    // Prevent scrolling when the menu is open (for mobile)
-    // This is a workaround for the issue where the body scrolls when the menu is open
-    // and the menu is positioned fixed
-    // This is not the best solution, but it works for now
-    // You can also use a library like react-scroll-lock or react-modal to handle this
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-  }, [menuOpen]);
-
+const Navbar: React.FC<NavbarProps> = ({ onOpenMenu }) => {
   return (
     <nav className="bg-navbar fixed top-0 left-0 z-40 w-full border-b border-white/10 shadow-lg backdrop-blur-lg">
       <div className="mx-auto max-w-5xl px-4">
@@ -24,8 +14,8 @@ const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
           </a>
 
           <div
-            className="relative z-40 h-5 w-7 cursor-pointer md:hidden"
-            onClick={() => setMenuOpen((prev) => !prev)}
+            className="relative z-40 h-5 w-7 cursor-pointer text-gray-300 md:hidden"
+            onClick={onOpenMenu}
           >
             &#9776;
           </div>
