@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import LoadingScreen from "./components/LoadingScreen";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layouts/Navbar";
 
 function App() {
   // isLoaded
