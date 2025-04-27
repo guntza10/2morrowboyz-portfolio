@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
 import Navbar from "./components/layouts/Navbar";
 import MobileMenu from "./components/layouts/MobileMenu";
+import Home from "./components/sections/Home";
 
 function App() {
   // isLoaded
@@ -24,6 +25,7 @@ function App() {
       >
         <Navbar onOpenMenu={handleOpenMenu} />
         <MobileMenu menuOpen={menuOpen} onCloseMenu={handleCloseMenu} />
+        <Home />
       </div>
     </>
   );

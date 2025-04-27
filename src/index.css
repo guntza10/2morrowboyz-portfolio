@@ -22,6 +22,12 @@
   .nav-link-mobile {
     @apply my-4 text-2xl font-semibold text-white transition-colors hover:text-gray-500;
   }
+  .btn {
+    @apply inline-block rounded px-6 py-3 font-medium;
+  }
+  .hover-btn {
+    @apply transform transition-all hover:-translate-y-0.5;
+  }
 }
 
 @layer utilities {
