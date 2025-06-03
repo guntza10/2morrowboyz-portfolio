@@ -1,17 +1,15 @@
 @import "tailwindcss";
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+@theme {
+  --color-navbar: rgba(10, 10, 10, 0.8);
+}
 
+@layer base {
+  html,
   body {
     @apply m-0 bg-neutral-950 p-0 font-sans text-gray-50;
     font-family: "Space Grotesk", sans-serif;
-  }
-
-  @theme {
-    --color-navbar: rgba(10, 10, 10, 0.8);
+    scroll-behavior: smooth;
   }
 }
 

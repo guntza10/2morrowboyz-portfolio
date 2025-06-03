@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 
-import LoadingScreen from "./components/LoadingScreen";
+import LoadingScreen from "./components/shared/LoadingScreen";
 import Navbar from "./components/layouts/Navbar";
 import MobileMenu from "./components/layouts/MobileMenu";
 import Home from "./components/sections/Home";
