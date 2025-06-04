@@ -1,31 +1,35 @@
-import React from "react";
+import profileImage from "../../assets/profile-image.jpg";
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <section
       id="home"
-      className="flex min-h-screen flex-col items-center justify-center px-4 text-center"
+      className="flex min-h-screen items-center justify-center py-20"
     >
-      <h1 className="mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-center text-5xl font-bold text-transparent md:text-7xl">
-        Hi, I'm Jomphop Saibuatong
-      </h1>
-      <p className="mx-auto mb-8 max-w-3xl text-center text-lg text-white">
-        I'm a Software Developer who believes strong fundamentals are the
-        foundation of great software. I constantly refine the basics to sharpen
-        my skills and stay ready to learn and adapt to new stacks and tools as
-        needed.
-      </p>
-      <div className="flex justify-center space-x-4">
-        <a href="#projects" className="btn hover-btn bg-blue-500 text-white">
-          View Projects
-        </a>
+      <div className="text-center">
+        <img
+          src={profileImage}
+          className="mx-auto mb-8 h-80 w-80 rounded-full border-6 border-blue-500 object-cover object-bottom-right shadow-2xl md:h-120 md:w-120"
+        />
 
-        <a
-          href="#contact"
-          className="btn hover-btn border border-blue-500/50 text-blue-500 hover:bg-blue-500/10"
-        >
-          Contact Me
-        </a>
+        <h1 className="text-gradient mb-6 text-3xl font-bold md:text-6xl">
+          Hi, I'm Jomphop Saibuatong
+        </h1>
+        <p className="mx-auto mb-8 max-w-xl text-lg text-gray-200 md:max-w-3xl">
+          I'm a Software Developer who believes strong fundamentals are the
+          foundation of great software. I constantly refine the basics to
+          sharpen my skills and stay ready to learn and adapt to new stacks and
+          tools as needed.
+        </p>
+
+        <div className="flex items-center justify-center gap-4">
+          <a href="#project" className="btn-primary">
+            View Projects
+          </a>
+          <a href="#contact" className="btn-secondary">
+            Contact Me
+          </a>
+        </div>
       </div>
     </section>
   );

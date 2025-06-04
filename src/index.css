@@ -7,7 +7,7 @@
 @layer base {
   html,
   body {
-    @apply m-0 bg-neutral-950 p-0 font-sans text-gray-50;
+    @apply m-0 bg-black p-0 font-sans text-gray-50;
     font-family: "Space Grotesk", sans-serif;
     scroll-behavior: smooth;
   }
@@ -15,10 +15,16 @@
 
 @layer components {
   .nav-link {
-    @apply text-gray-300 transition-all duration-300 ease-out hover:font-bold hover:text-white;
+    @apply text-gray-300 transition-all duration-300 hover:font-bold hover:text-white;
   }
   .nav-link-for-mobile {
-    @apply text-2xl text-gray-300 transition-all duration-300 ease-out hover:font-bold hover:text-white;
+    @apply text-2xl text-gray-300 transition-all duration-300 hover:font-bold hover:text-white;
+  }
+  .btn-primary {
+    @apply rounded bg-blue-500 px-6 py-3 font-semibold text-white transition-transform duration-300 hover:-translate-y-1;
+  }
+  .btn-secondary {
+    @apply rounded border border-blue-500 bg-black px-6 py-3 font-semibold text-blue-500 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500/10;
   }
 }
 
@@ -48,5 +54,9 @@
 
   .animate-loading {
     animation: loading 0.8s ease-in infinite;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent;
   }
 }

@@ -11,7 +11,7 @@ const Navbar = ({ onOpenMobileMenu }: NavbarProps) => {
         <div className="flex items-center justify-between">
           {/* Name */}
           <a href="#home" className="font-mono text-xl font-bold">
-            Jomphop <span className="text-blue-500">Saibuatong</span>
+            Jomphop <span className="text-gradient">Saibuatong</span>
           </a>
 
           {/* Hamburger menu */}

@@ -5,30 +5,43 @@ import Navbar from "./components/layouts/Navbar";
 import MobileMenu from "./components/layouts/MobileMenu";
 import Home from "./components/sections/Home";
 
-function App() {
-  // isLoaded
-  const [isLoaded, setIsLoaded] = useState(false);
+const App = () => {
+  // isLoading
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleCompleted = () => setIsLoaded(true);
+  const handleCompleteLoading = () => setIsLoading(false);
 
-  // menuOpen
-  const [menuOpen, setMenuOpen] = useState(false);
+  // isOpenMobileMenu
+  const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
-  const handleOpenMenu = useCallback(() => setMenuOpen(true), []);
-  const handleCloseMenu = useCallback(() => setMenuOpen(false), []);
+  const handleOpenMobileMenu = useCallback(() => setIsOpenMobileMenu(true), []);
+  const handleCloseMobileMenu = useCallback(
+    () => setIsOpenMobileMenu(false),
+    [],
+  );
 
   return (
-    <>
-      {!isLoaded && <LoadingScreen onCompleted={handleCompleted} />}
+    <div>
+      {/* loading */}
+      {isLoading && <LoadingScreen onComplete={handleCompleteLoading} />}
+
       <div
-        className={`min-h-screen text-gray-700 ${isLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-700`}
+        className={`transition-opacity duration-700 ease-in ${isLoading ? "opacity-0" : "opacity-100"}`}
       >
-        <Navbar onOpenMenu={handleOpenMenu} />
-        <MobileMenu menuOpen={menuOpen} onCloseMenu={handleCloseMenu} />
-        <Home />
+        {/* navbar and mobile menu */}
+        <Navbar onOpenMobileMenu={handleOpenMobileMenu} />
+        <MobileMenu isOpen={isOpenMobileMenu} onClose={handleCloseMobileMenu} />
+
+        {/* main */}
+        <main>
+          <Home />
+        </main>
+
+        {/* footer */}
+        <footer></footer>
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default App;
