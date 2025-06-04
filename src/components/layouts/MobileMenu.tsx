@@ -1,45 +1,38 @@
-import React, { useEffect } from "react";
+import { memo } from "react";
 
 interface MobileMenuProps {
-  menuOpen: boolean;
-  onCloseMenu: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ menuOpen, onCloseMenu }) => {
-  useEffect(() => {
-    // Prevent scrolling when the menu is open (for mobile)
-    // This is a workaround for the issue where the body scrolls when the menu is open
-    // and the menu is positioned fixed
-    // This is not the best solution, but it works for now
-    // You can also use a library like react-scroll-lock or react-modal to handle this
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-  }, [menuOpen]);
-
+const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   return (
     <div
-      className={`bg-navbar fixed top-0 left-0 z-40 flex w-full flex-col items-center justify-center transition-all duration-300 ease-in-out ${menuOpen ? "pointer-events-auto h-screen opacity-100" : "pointer-events-none h-0 opacity-0"}`}
+      className={`fixed inset-0 z-50 flex w-full flex-col items-center justify-center gap-8 bg-black/80 transition-all duration-300 ease-in-out ${isOpen ? "pointer-events-auto h-screen opacity-100" : "pointer-events-none h-0 opacity-0"}`}
     >
+      {/* close button */}
       <button
-        onClick={onCloseMenu}
-        className="absolute top-6 right-6 cursor-pointer text-3xl text-white focus:outline-none"
+        className="absolute top-4 right-4 text-4xl font-semibold hover:cursor-pointer"
+        onClick={onClose}
       >
         &times;
       </button>
 
-      <a href="#home" className="nav-link-mobile" onClick={onCloseMenu}>
+      {/* nav link */}
+      <a href="#home" className="nav-link-for-mobile" onClick={onClose}>
         Home
       </a>
-      <a href="#about" className="nav-link-mobile" onClick={onCloseMenu}>
+      <a href="#about" className="nav-link-for-mobile" onClick={onClose}>
         About
       </a>
-      <a href="#projects" className="nav-link-mobile" onClick={onCloseMenu}>
+      <a href="#projects" className="nav-link-for-mobile" onClick={onClose}>
         Projects
       </a>
-      <a href="#contact" className="nav-link-mobile" onClick={onCloseMenu}>
+      <a href="#contact" className="nav-link-for-mobile" onClick={onClose}>
         Contact
       </a>
     </div>
   );
 };
 
-export default React.memo(MobileMenu);
+export default memo(MobileMenu);

@@ -15,16 +15,10 @@
 
 @layer components {
   .nav-link {
-    @apply text-gray-300 transition-colors hover:text-white;
+    @apply text-gray-300 transition-all duration-300 ease-out hover:font-bold hover:text-white;
   }
-  .nav-link-mobile {
-    @apply my-4 text-2xl font-semibold text-white transition-colors hover:text-gray-500;
-  }
-  .btn {
-    @apply inline-block rounded px-6 py-3 font-medium;
-  }
-  .hover-btn {
-    @apply transform transition-all hover:-translate-y-0.5;
+  .nav-link-for-mobile {
+    @apply text-2xl text-gray-300 transition-all duration-300 ease-out hover:font-bold hover:text-white;
   }
 }
 
@@ -40,20 +34,19 @@
   }
 
   .animate-blink {
-    animation: blink 0.8s step-end infinite;
+    animation: blink 0.8s ease-in-out infinite;
   }
 
   @keyframes loading {
     0% {
       transform: translateX(-100%);
     }
-
     100% {
-      transform: translateX(250%);
+      transform: translateX(200%);
     }
   }
 
-  .animate-loading-bar {
-    animation: loading 0.8s ease infinite;
+  .animate-loading {
+    animation: loading 0.8s ease-in infinite;
   }
 }

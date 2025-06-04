@@ -1,39 +1,38 @@
 import { useEffect, useState } from "react";
 
 interface LoadingScreenProps {
-  onCompleted: () => void;
+  onComplete: () => void;
 }
 
 // constant value
-const fullText = "<Hello World />";
+const welcomeMessage = "<Hello, Welcome to my portfolio />";
 
-const LoadingScreen: React.FC<LoadingScreenProps> = ({ onCompleted }) => {
-  const [text, setText] = useState("");
+const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
-    let index: number = 0;
+    let index = 0;
     const interval = setInterval(() => {
-      setText(fullText.substring(0, index));
+      setMessage(welcomeMessage.slice(0, index));
       index++;
-
-      if (index > fullText.length) {
+      if (index > welcomeMessage.length) {
         clearInterval(interval);
-
-        setTimeout(() => onCompleted(), 1000);
+        setTimeout(onComplete, 1500);
       }
     }, 100);
 
-    return () => clearInterval(interval);
-  }, [onCompleted]);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black text-gray-100">
-      <div className="mb-4 font-mono text-4xl font-bold">
-        {text} <span className="animate-blink ml-1"> | </span>
-      </div>
-
-      <div className="relative h-[2px] w-[200px] overflow-hidden rounded bg-gray-800">
-        <div className="animate-loading-bar h-full w-[40%] bg-blue-500 shadow-[0_0_15px_#3b82f6]"></div>
+    <div className="fixed inset-0 z-60 flex flex-col items-center justify-center bg-black text-white">
+      <h1 className="mb-6 font-mono text-sm font-bold md:text-2xl lg:text-4xl">
+        {message} <span className="animate-blink">|</span>
+      </h1>
+      <div className="h-[2px] w-[200px] overflow-hidden rounded-full bg-gray-800 md:w-[400px] lg:w-[600px]">
+        <div className="animate-loading h-full w-[40%] bg-blue-500"></div>
       </div>
     </div>
   );
