@@ -4,6 +4,7 @@ import LoadingScreen from "./components/shared/LoadingScreen";
 import Navbar from "./components/layouts/Navbar";
 import MobileMenu from "./components/layouts/MobileMenu";
 import Home from "./components/sections/Home";
+import About from "./components/sections/About";
 
 const App = () => {
   // isLoading
@@ -35,6 +36,7 @@ const App = () => {
         {/* main */}
         <main>
           <Home />
+          <About />
         </main>
 
         {/* footer */}

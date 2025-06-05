@@ -2,10 +2,7 @@ import profileImage from "../../assets/profile-image.jpg";
 
 const Home = () => {
   return (
-    <section
-      id="home"
-      className="flex min-h-screen items-center justify-center py-20"
-    >
+    <section id="home" className="section-container">
       <div className="text-center">
         <img
           src={profileImage}
