@@ -5,6 +5,7 @@ import Navbar from "./components/layouts/Navbar";
 import MobileMenu from "./components/layouts/MobileMenu";
 import Home from "./components/sections/Home";
 import About from "./components/sections/About";
+import Projects from "./components/sections/Projects";
 
 const App = () => {
   // isLoading
@@ -37,6 +38,7 @@ const App = () => {
         <main>
           <Home />
           <About />
+          <Projects />
         </main>
 
         {/* footer */}
