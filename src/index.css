@@ -32,6 +32,9 @@
   .card {
     @apply rounded-xl border border-white/10 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500;
   }
+  .section-title {
+    @apply mb-8 text-center text-3xl font-bold;
+  }
   .title {
     @apply mb-4 text-xl font-bold;
   }
@@ -46,6 +49,9 @@
   }
   .view-project-link {
     @apply inline-block text-blue-400 transition-all duration-300 hover:-translate-y-1 hover:text-blue-300;
+  }
+  .input-field {
+    @apply w-full rounded border border-white/10 bg-white/5 px-4 py-3 text-white transition duration-300 focus:border-blue-500 focus:bg-blue-500/5 focus:outline-none;
   }
 }
 

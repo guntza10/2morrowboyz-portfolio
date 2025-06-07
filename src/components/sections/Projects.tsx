@@ -47,9 +47,7 @@ const Projects = () => {
   return (
     <section id="projects" className="section-container">
       <div className="mx-auto max-w-5xl px-4">
-        <h1 className="text-gradient mb-8 text-center text-3xl font-bold">
-          Featured Projects
-        </h1>
+        <h2 className="text-gradient section-title">Featured Projects</h2>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {featuredProjects.map(

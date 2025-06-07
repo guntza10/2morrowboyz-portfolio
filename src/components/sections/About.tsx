@@ -7,9 +7,7 @@ const About = () => {
   return (
     <section id="about" className="section-container">
       <div className="mx-auto max-w-4xl px-4">
-        <h1 className="text-gradient mb-8 text-center text-3xl font-bold">
-          About Me
-        </h1>
+        <h2 className="text-gradient section-title">About Me</h2>
 
         <article className="card mb-8">
           <p className="mb-6 text-gray-300">

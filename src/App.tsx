@@ -6,6 +6,7 @@ import MobileMenu from "./components/layouts/MobileMenu";
 import Home from "./components/sections/Home";
 import About from "./components/sections/About";
 import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
 
 const App = () => {
   // isLoading
@@ -39,6 +40,7 @@ const App = () => {
           <Home />
           <About />
           <Projects />
+          <Contact />
         </main>
 
         {/* footer */}
