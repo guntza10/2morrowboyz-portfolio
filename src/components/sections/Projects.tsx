@@ -1,44 +1,44 @@
-import project1 from "../../assets/project-1.jpg";
-import project2 from "../../assets/project-2.jpg";
-import project3 from "../../assets/project-3.jpeg";
-import project4 from "../../assets/project-4.jpeg";
+import demoPortfolio from "../../assets/demo-portfolio.jpg";
+import myPortFolio from "../../assets/my-portfolio.jpg";
+import jamming from "../../assets/jamming.jpg";
+import flashcards from "../../assets/flash-cards.png";
 
 // constant value
 const featuredProjects = [
   {
     id: 1,
-    name: "Cloud Platform",
+    name: "demo-portfolio",
     description:
-      "Scalable cloud infrastructure management with real-time monitoring and automated scaling.",
-    techStacks: ["React", "Node.js", "AWS", "Docker"],
-    image: project1,
-    link: "https://github.com/guntza10/mixed-message",
-  },
-  {
-    id: 2,
-    name: "AI Analytics Dashboard",
-    description:
-      "ML-powered data visualization platform with predictive analytics and interactive reports.",
-    techStacks: ["React", "Node.js", "AWS", "Docker"],
-    image: project2,
+      "For this project, you will build a personal portfolio site, a static website where you can share the projects that you build in this Path. Typically, a portfolio website will have a main page that features different projects that you’ve built and another page that contains contact information, in case someone wants to reach out to you. Occasionally, there are additional pages for each project, detailing the technology used.",
+    techStacks: ["HTML", "CSS", "JavaScript"],
+    image: demoPortfolio,
     link: "https://github.com/guntza10/demo-portfolio",
   },
   {
-    id: 3,
-    name: "E-Commerce Web App",
+    id: 2,
+    name: "my-portfolio",
     description:
-      "Full-stack e-commerce with modern UI, secure payment integration, and customizable product inventory.",
-    techStacks: ["React", "Node.js", "AWS", "Docker"],
-    image: project3,
+      "For this project, you will build a personal portfolio site, a static website where you can share the projects that you build in this Path. Typically, a portfolio website will have a main page that features different projects that you’ve built and another page that contains contact information, in case someone wants to reach out to you. Occasionally, there are additional pages for each project, detailing the technology used.",
+    techStacks: ["HTML", "CSS", "JavaScript"],
+    image: myPortFolio,
+    link: "https://github.com/guntza10/my-portfolio",
+  },
+  {
+    id: 3,
+    name: "spotify-personal-playlist",
+    description:
+      "Jammming is a React web application that allows users to search the Spotify library, preview each track, create a custom playlist, save it to their Spotify account and view custom playlist after creation playlist. This project demonstrates how to integrate React components, state management, and API requests to create a functional and interactive web experience.",
+    techStacks: ["React", "HTML", "CSS", "JavaScript"],
+    image: jamming,
     link: "https://github.com/guntza10/spotify-personal-playlist",
   },
   {
     id: 4,
-    name: "Real-Time Chat App",
+    name: "Flashcards Quiz App",
     description:
-      "Scalable chat platform supporting real-time messaging, presence, and group chat features.",
-    techStacks: ["React", "Node.js", "AWS", "Docker"],
-    image: project4,
+      "This project is a flashcard-style quiz app built with React, Redux, and Redux Toolkit. Users can create topics, quizzes within those topics, and flashcards for each quiz. The app also allows users to interact with quizzes by flipping flashcards to review content.",
+    techStacks: ["React", "Redux", "HTML", "CSS", "JavaScript"],
+    image: flashcards,
     link: "https://github.com/guntza10/flashcards",
   },
 ];
