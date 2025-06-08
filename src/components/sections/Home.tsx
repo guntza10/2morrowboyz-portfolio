@@ -20,7 +20,7 @@ const Home = () => {
         </p>
 
         <div className="flex items-center justify-center gap-4">
-          <a href="#project" className="btn-primary">
+          <a href="#projects" className="btn-primary">
             View Projects
           </a>
           <a href="#contact" className="btn-secondary">
