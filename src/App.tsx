@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 
+import { Toaster } from "sonner";
 import LoadingScreen from "./components/shared/LoadingScreen";
 import Navbar from "./components/layouts/Navbar";
 import MobileMenu from "./components/layouts/MobileMenu";
@@ -41,6 +42,9 @@ const App = () => {
           <About />
           <Projects />
           <Contact />
+
+          {/* toast */}
+          <Toaster position="top-right" richColors />
         </main>
 
         {/* footer */}
