@@ -1,11 +1,7 @@
 import React from "react";
 import { useInView } from "../../hooks/useInView";
 
-export default function RevealOnScroll({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
   const { ref, isInView } = useInView();
 
   return (
@@ -18,4 +14,6 @@ export default function RevealOnScroll({
       {children}
     </div>
   );
-}
+};
+
+export default RevealOnScroll;
