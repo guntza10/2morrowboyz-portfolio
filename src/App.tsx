@@ -8,6 +8,7 @@ import Home from "./components/sections/Home";
 import About from "./components/sections/About";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
+import RevealOnScroll from "./components/sections/RevealOnScroll";
 
 const App = () => {
   // isLoading
@@ -38,17 +39,22 @@ const App = () => {
 
         {/* main */}
         <main>
-          <Home />
-          <About />
-          <Projects />
-          <Contact />
+          <RevealOnScroll>
+            <Home />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <About />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <Projects />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <Contact />
+          </RevealOnScroll>
 
           {/* toast */}
           <Toaster position="top-right" richColors />
         </main>
-
-        {/* footer */}
-        <footer></footer>
       </div>
     </div>
   );
