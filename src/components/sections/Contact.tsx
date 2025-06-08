@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { parseError } from "../../utils/common";
 
 import { toast } from "sonner";
+import Loading from "../shared/Loading";
 
 // constant value
 const initialFormData = {
@@ -13,6 +14,7 @@ const initialFormData = {
 
 const Contact = () => {
   const [formData, setFormData] = useState(initialFormData);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChangeFormData = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -22,6 +24,7 @@ const Contact = () => {
   };
   const handleSubmitForm = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsLoading(true);
 
     try {
       await emailjs.sendForm(
@@ -38,12 +41,14 @@ const Contact = () => {
     } catch (error) {
       const message = parseError(error);
       toast.error(message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <section id="contact" className="section-container">
-      <div className="w-full px-4 md:w-[550px]">
+      <div className="relative w-full px-4 md:w-[550px]">
         <h2 className="text-gradient section-title">Get In Touch</h2>
 
         <form onSubmit={handleSubmitForm}>
@@ -79,6 +84,9 @@ const Contact = () => {
             Send Message
           </button>
         </form>
+
+        {/* Loading Overlay */}
+        {isLoading && <Loading />}
       </div>
     </section>
   );
