@@ -32,7 +32,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
         {message} <span className="animate-blink">|</span>
       </h1>
       <div className="h-[2px] w-[200px] overflow-hidden rounded-full bg-gray-800 md:w-[400px] lg:w-[600px]">
-        <div className="animate-loading h-full w-[40%] bg-blue-500"></div>
+        <div className="animate-loading h-full w-[40%] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500"></div>
       </div>
     </div>
   );
