@@ -19,16 +19,32 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       </button>
 
       {/* nav link */}
-      <a href="#home" className="nav-link-for-mobile" onClick={onClose}>
+      <a
+        href="#home"
+        className="nav-link-for-mobile nav-link-animate"
+        onClick={onClose}
+      >
         Home
       </a>
-      <a href="#about" className="nav-link-for-mobile" onClick={onClose}>
+      <a
+        href="#about"
+        className="nav-link-for-mobile nav-link-animate"
+        onClick={onClose}
+      >
         About
       </a>
-      <a href="#projects" className="nav-link-for-mobile" onClick={onClose}>
+      <a
+        href="#projects"
+        className="nav-link-for-mobile nav-link-animate"
+        onClick={onClose}
+      >
         Projects
       </a>
-      <a href="#contact" className="nav-link-for-mobile" onClick={onClose}>
+      <a
+        href="#contact"
+        className="nav-link-for-mobile nav-link-animate"
+        onClick={onClose}
+      >
         Contact
       </a>
     </div>

@@ -10,7 +10,10 @@ const Navbar = ({ onOpenMobileMenu }: NavbarProps) => {
       <nav className="mx-auto max-w-6xl">
         <div className="flex items-center justify-between">
           {/* Name */}
-          <a href="#home" className="font-mono text-xl font-bold">
+          <a
+            href="#home"
+            className="font-mono text-xl font-bold transition-transform duration-300 hover:scale-110"
+          >
             Jomphop <span className="text-gradient">Saibuatong</span>
           </a>
 
@@ -24,16 +27,16 @@ const Navbar = ({ onOpenMobileMenu }: NavbarProps) => {
 
           {/* Nav link */}
           <div className="hidden items-center gap-6 md:flex">
-            <a href="#home" className="nav-link">
+            <a href="#home" className="nav-link nav-link-animate">
               Home
             </a>
-            <a href="#about" className="nav-link">
+            <a href="#about" className="nav-link nav-link-animate">
               About
             </a>
-            <a href="#projects" className="nav-link">
+            <a href="#projects" className="nav-link nav-link-animate">
               Projects
             </a>
-            <a href="#contact" className="nav-link">
+            <a href="#contact" className="nav-link nav-link-animate">
               Contact
             </a>
           </div>

@@ -134,6 +134,31 @@
   .nav-link-for-mobile {
     @apply text-2xl text-gray-300 transition-all duration-300 hover:font-bold hover:text-white;
   }
+  .nav-link-animate {
+    /* 1. Set up the container for positioning the underline */
+    @apply relative inline-block pb-1; /* Use padding-bottom to create space for the line */
+  }
+  /* 2. Create the pseudo-element that will be our underline */
+  .nav-link-animate::after {
+    /* Required for pseudo-elements */
+    content: "";
+
+    /* 3. Style the underline itself */
+    @apply absolute h-[4px] rounded-full; /* Set thickness and rounded ends */
+    /* @apply bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500; */
+    @apply bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500; /* gradient color */
+
+    /* 4. Position it at the bottom-left to start */
+    @apply bottom-0 left-0;
+
+    /* 5. Set the initial state (hidden) and transition */
+    @apply w-0; /* Initial width is 0, so it's hidden */
+    @apply transition-all duration-300 ease-out; /* The animation properties */
+  }
+  /* 6. Define the hover state */
+  .nav-link-animate:hover::after {
+    @apply w-full; /* On hover, make the underline's width 100% */
+  }
   .btn-primary {
     @apply rounded bg-blue-500 px-6 py-3 font-semibold text-white transition-transform duration-300 hover:-translate-y-1;
   }
@@ -164,6 +189,9 @@
   .input-field {
     @apply w-full rounded border border-white/10 bg-white/5 px-4 py-3 text-white transition duration-300 focus:border-blue-500 focus:bg-blue-500/5 focus:outline-none;
   }
+  .icon-style {
+    @apply rounded-full border-4 border-gray-400 p-2 text-gray-400 transition-all duration-300 hover:-translate-y-2 hover:border-gray-100 hover:text-gray-100;
+  }
 }
 
 @layer utilities {
@@ -193,6 +221,7 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-500 to-cyan-300 bg-clip-text text-transparent;
+    /* @apply bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent; */
+    @apply bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent;
   }
 }
