@@ -1,5 +1,6 @@
 import jamming from "../assets/jamming.jpg";
 import flashcards from "../assets/flash-cards.jpg";
+import tomorrowboyzPortfolio from "../assets/2morrowboyz-portfolio.jpg";
 import myPortFolio from "../assets/my-portfolio.jpg";
 import demoPortfolio from "../assets/demo-portfolio.jpg";
 
@@ -26,6 +27,16 @@ export const personalProjects = [
     },
     {
         id: 3,
+        name: "2morrowboyz-portfolio",
+        description:
+            "A modern portfolio website crafted with React, TypeScript, Tailwind CSS, and Vite. This project showcases an interactive, responsive design to present personal projects, skills, and experiences. It features smooth navigation, animated sections, and optimized performance for a seamless user experience. The site demonstrates best practices in component architecture, state management, and styling with Tailwind, highlighting both technical proficiency and aesthetic sensibility.",
+        techStacks: ["React", "HTML", "CSS", "Typescript", "Tailwind CSS"],
+        image: tomorrowboyzPortfolio,
+        github_url: "https://github.com/guntza10/2morrowboyz-portfolio",
+        live_demo_url: "https://2morrowboyz-portfolio.netlify.app",
+    },
+    {
+        id: 4,
         name: "my-portfolio",
         description:
             "For this project, you will build a personal portfolio site, a static website where you can share the projects that you build in this Path. Typically, a portfolio website will have a main page that features different projects that you’ve built and another page that contains contact information, in case someone wants to reach out to you. Occasionally, there are additional pages for each project, detailing the technology used.",
@@ -35,7 +46,7 @@ export const personalProjects = [
         live_demo_url: "https://guntza10.github.io/my-portfolio",
     },
     {
-        id: 4,
+        id: 5,
         name: "demo-portfolio",
         description:
             "For this project, you will build a personal portfolio site, a static website where you can share the projects that you build in this Path. Typically, a portfolio website will have a main page that features different projects that you’ve built and another page that contains contact information, in case someone wants to reach out to you. Occasionally, there are additional pages for each project, detailing the technology used.",

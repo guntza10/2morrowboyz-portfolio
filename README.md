@@ -1,6 +1,16 @@
 # 2morrowboyz Portfolio
 
-A modern portfolio website built with **React**, **TypeScript**, and **Vite**.
+A modern portfolio website crafted with **React**, **TypeScript**, **Tailwind CSS**, and **Vite**. This project showcases an interactive, responsive design to present personal projects, skills, and experiences. It features smooth navigation, animated sections, and optimized performance for a seamless user experience. The site demonstrates best practices in component architecture, state management, and styling with Tailwind, highlighting both technical proficiency and aesthetic sensibility.
+
+## Demo
+
+You can view a live demo of this portfolio project here:
+
+[Live Demo Link](https://2morrowboyz-portfolio.netlify.app)
+
+Or see example screenshots below:
+
+![Overview Website](src/assets/overview-website.jpg)
 
 ## Features
 
@@ -68,17 +78,6 @@ configs/             # Project configuration files
 - Add or modify images in `src/assets/`.
 - UI utilities can be found in `src/components/components/ui/`.
 - Project configuration files are in `configs/`.
-
-## Demo
-
-You can view a live demo of this portfolio project here:
-
-[Live Demo Link](#) <!-- Replace # with your actual deployed URL -->
-
-Or see example screenshots below:
-
-![Home Section](src/assets/my-portfolio.jpg)
-![Projects Section](src/assets/project-1.jpg)
 
 ## Credits
 
