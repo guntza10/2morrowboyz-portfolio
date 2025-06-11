@@ -3,7 +3,7 @@ import myPortFolio from "../assets/my-portfolio.jpg";
 import jamming from "../assets/jamming.jpg";
 import flashcards from "../assets/flash-cards.jpg";
 
-export const featuredProjects = [
+export const personalProjects = [
     {
         id: 1,
         name: "spotify-personal-playlist",
@@ -43,5 +43,21 @@ export const featuredProjects = [
         image: demoPortfolio,
         github_url: "https://github.com/guntza10/demo-portfolio",
         live_demo_url: "https://guntza10.github.io/demo-portfolio",
+    },
+];
+
+export const navigationLinks = [
+    { id: 1, name: "Home", href: "#home" },
+    { id: 2, name: "About", href: "#about" },
+    { id: 3, name: "Projects", href: "#projects" },
+    { id: 4, name: "Contact", href: "#contact" },
+];
+
+export const socialLinks = [
+    {
+        id: 1,
+        name: "GitHub",
+        href: "",
+        icon: "",
     },
 ];

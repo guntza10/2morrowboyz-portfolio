@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { navigationLinks } from "../../utils/constant";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -19,34 +20,16 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       </button>
 
       {/* nav link */}
-      <a
-        href="#home"
-        className="nav-link-for-mobile nav-link-animate"
-        onClick={onClose}
-      >
-        Home
-      </a>
-      <a
-        href="#about"
-        className="nav-link-for-mobile nav-link-animate"
-        onClick={onClose}
-      >
-        About
-      </a>
-      <a
-        href="#projects"
-        className="nav-link-for-mobile nav-link-animate"
-        onClick={onClose}
-      >
-        Projects
-      </a>
-      <a
-        href="#contact"
-        className="nav-link-for-mobile nav-link-animate"
-        onClick={onClose}
-      >
-        Contact
-      </a>
+      {navigationLinks.map(({ id, name, href }) => (
+        <a
+          key={id}
+          href={href}
+          className="nav-link-for-mobile nav-link-animate"
+          onClick={onClose}
+        >
+          {name}
+        </a>
+      ))}
     </div>
   );
 };

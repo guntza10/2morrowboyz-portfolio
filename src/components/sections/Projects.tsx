@@ -1,4 +1,4 @@
-import { featuredProjects } from "../../utils/constant";
+import { personalProjects } from "../../utils/constant";
 
 const Projects = () => {
   return (
@@ -7,7 +7,7 @@ const Projects = () => {
         <h2 className="text-gradient section-title">Personal Projects</h2>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {featuredProjects.map(
+          {personalProjects.map(
             ({
               id,
               name,

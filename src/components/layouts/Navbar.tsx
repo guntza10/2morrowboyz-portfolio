@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { navigationLinks } from "../../utils/constant";
 
 interface NavbarProps {
   onOpenMobileMenu: () => void;
@@ -27,18 +28,11 @@ const Navbar = ({ onOpenMobileMenu }: NavbarProps) => {
 
           {/* Nav link */}
           <div className="hidden items-center gap-6 md:flex">
-            <a href="#home" className="nav-link nav-link-animate">
-              Home
-            </a>
-            <a href="#about" className="nav-link nav-link-animate">
-              About
-            </a>
-            <a href="#projects" className="nav-link nav-link-animate">
-              Projects
-            </a>
-            <a href="#contact" className="nav-link nav-link-animate">
-              Contact
-            </a>
+            {navigationLinks.map(({ id, name, href }) => (
+              <a key={id} href={href} className="nav-link nav-link-animate">
+                {name}
+              </a>
+            ))}
           </div>
         </div>
       </nav>
