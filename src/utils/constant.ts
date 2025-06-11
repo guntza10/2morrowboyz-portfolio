@@ -1,7 +1,7 @@
-import demoPortfolio from "../assets/demo-portfolio.jpg";
-import myPortFolio from "../assets/my-portfolio.jpg";
 import jamming from "../assets/jamming.jpg";
 import flashcards from "../assets/flash-cards.jpg";
+import myPortFolio from "../assets/my-portfolio.jpg";
+import demoPortfolio from "../assets/demo-portfolio.jpg";
 
 export const personalProjects = [
     {
@@ -51,13 +51,4 @@ export const navigationLinks = [
     { id: 2, name: "About", href: "#about" },
     { id: 3, name: "Projects", href: "#projects" },
     { id: 4, name: "Contact", href: "#contact" },
-];
-
-export const socialLinks = [
-    {
-        id: 1,
-        name: "GitHub",
-        href: "",
-        icon: "",
-    },
 ];

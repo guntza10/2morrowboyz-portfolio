@@ -2,6 +2,24 @@ import profileImage from "../../assets/profile-image.jpg";
 
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "lucide-react";
 
+const socialLinks = [
+  {
+    key: "GitHub",
+    href: "https://github.com/guntza10",
+    icon: <GithubIcon size={20} />,
+  },
+  {
+    key: "LinkedIn",
+    href: "https://www.linkedin.com/in/jomphop-saibuatong-331981212",
+    icon: <LinkedinIcon size={20} />,
+  },
+  {
+    key: "Instagram",
+    href: "https://www.instagram.com/2morrownomad",
+    icon: <InstagramIcon size={20} />,
+  },
+];
+
 const Home = () => {
   return (
     <section id="home" className="section-container">
@@ -24,30 +42,17 @@ const Home = () => {
         </p>
 
         <div className="mb-8 flex items-center justify-center gap-4">
-          <a
-            className="icon-style"
-            href="https://github.com/guntza10"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GithubIcon size={20} />
-          </a>
-          <a
-            className="icon-style"
-            href="https://www.linkedin.com/in/jomphop-saibuatong-331981212"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedinIcon size={20} />
-          </a>
-          <a
-            className="icon-style"
-            href="https://www.instagram.com/2morrownomad"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon size={20} />
-          </a>
+          {socialLinks.map(({ key, href, icon }) => (
+            <a
+              key={key}
+              className="icon-style"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {icon}
+            </a>
+          ))}
         </div>
 
         <div className="flex items-center justify-center gap-4">
