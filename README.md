@@ -73,7 +73,7 @@ configs/             # Project configuration files
 
 You can view a live demo of this portfolio project here:
 
-[Live Demo Link](#) <!-- Replace # with your actual deployed URL -->
+[Live Demo Link](https://2morrowboyz-portfolio.netlify.app)
 
 Or see example screenshots below:
 
