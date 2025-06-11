@@ -195,6 +195,9 @@
   .icon-style {
     @apply rounded-full border-4 border-gray-400 p-2 text-gray-400 transition-all duration-300 hover:-translate-y-2 hover:border-gray-100 hover:text-gray-100;
   }
+  .pagination-link {
+    @apply text-blue-500 transition-all duration-300 hover:!bg-blue-500 hover:!text-white;
+  }
 }
 
 @layer utilities {

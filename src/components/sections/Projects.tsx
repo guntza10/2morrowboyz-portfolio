@@ -1,13 +1,46 @@
+import { useMemo, useRef, useState } from "react";
+
 import { personalProjects } from "../../utils/constant";
 
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "../components/ui/pagination";
+
+const PROJECTS_PER_PAGE = 4;
+
 const Projects = () => {
+  // ref
+  const projectRef = useRef<HTMLDivElement>(null);
+
+  // pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(personalProjects.length / PROJECTS_PER_PAGE);
+  const paginatedProjects = useMemo(
+    () =>
+      personalProjects.slice(
+        (currentPage - 1) * PROJECTS_PER_PAGE,
+        currentPage * PROJECTS_PER_PAGE,
+      ),
+    [currentPage],
+  );
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    projectRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section id="projects" className="section-container">
+    <section ref={projectRef} id="projects" className="section-container">
       <div className="mx-auto max-w-5xl px-4">
         <h2 className="text-gradient section-title">Personal Projects</h2>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {personalProjects.map(
+        <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {paginatedProjects.map(
             ({
               id,
               name,
@@ -58,6 +91,45 @@ const Projects = () => {
             ),
           )}
         </div>
+
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious
+                size="default"
+                onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                aria-disabled={currentPage === 1}
+                className="pagination-link"
+              />
+            </PaginationItem>
+            {[...Array(totalPages)].map((_, idx) => (
+              <PaginationItem key={idx}>
+                <PaginationLink
+                  size="default"
+                  isActive={currentPage === idx + 1}
+                  onClick={() => handlePageChange(idx + 1)}
+                  className={`pagination-link ${
+                    currentPage === idx + 1
+                      ? "bg-primary border-blue-500 text-blue-500"
+                      : ""
+                  }`}
+                >
+                  {idx + 1}
+                </PaginationLink>
+              </PaginationItem>
+            ))}
+            <PaginationItem>
+              <PaginationNext
+                size="default"
+                onClick={() =>
+                  handlePageChange(Math.min(totalPages, currentPage + 1))
+                }
+                aria-disabled={currentPage === totalPages}
+                className="pagination-link"
+              />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
       </div>
     </section>
   );
