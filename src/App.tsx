@@ -34,7 +34,7 @@ const socialLinks = [
 
 const App = () => {
   // isLoading
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleCompleteLoading = () => setIsLoading(false);
 
