@@ -9,6 +9,28 @@ import About from "./components/sections/About";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import RevealOnScroll from "./components/sections/RevealOnScroll";
+import Footer from "./components/layouts/Footer";
+
+import { GithubIcon, InstagramIcon, LinkedinIcon } from "lucide-react";
+
+// constant value
+const socialLinks = [
+  {
+    key: "GitHub",
+    href: "https://github.com/guntza10",
+    icon: <GithubIcon size={20} />,
+  },
+  {
+    key: "LinkedIn",
+    href: "https://www.linkedin.com/in/jomphop-saibuatong-331981212",
+    icon: <LinkedinIcon size={20} />,
+  },
+  {
+    key: "Instagram",
+    href: "https://www.instagram.com/2morrownomad",
+    icon: <InstagramIcon size={20} />,
+  },
+];
 
 const App = () => {
   // isLoading
@@ -40,7 +62,7 @@ const App = () => {
         {/* main */}
         <main>
           <RevealOnScroll>
-            <Home />
+            <Home socialLinks={socialLinks} />
           </RevealOnScroll>
           <RevealOnScroll>
             <About />
@@ -51,10 +73,13 @@ const App = () => {
           <RevealOnScroll>
             <Contact />
           </RevealOnScroll>
-
-          {/* toast */}
-          <Toaster position="top-right" richColors />
         </main>
+
+        {/* footer */}
+        <Footer socialLinks={socialLinks} />
+
+        {/* toast */}
+        <Toaster position="top-right" richColors />
       </div>
     </div>
   );

@@ -1,26 +1,15 @@
 import profileImage from "../../assets/profile-image.jpg";
 
-import { GithubIcon, InstagramIcon, LinkedinIcon } from "lucide-react";
+export interface SocialLink {
+  key: string;
+  href: string;
+  icon: React.ReactNode;
+}
+interface HomeProps {
+  socialLinks: SocialLink[];
+}
 
-const socialLinks = [
-  {
-    key: "GitHub",
-    href: "https://github.com/guntza10",
-    icon: <GithubIcon size={20} />,
-  },
-  {
-    key: "LinkedIn",
-    href: "https://www.linkedin.com/in/jomphop-saibuatong-331981212",
-    icon: <LinkedinIcon size={20} />,
-  },
-  {
-    key: "Instagram",
-    href: "https://www.instagram.com/2morrownomad",
-    icon: <InstagramIcon size={20} />,
-  },
-];
-
-const Home = () => {
+const Home = ({ socialLinks }: HomeProps) => {
   return (
     <section id="home" className="section-container">
       <div className="text-center">
