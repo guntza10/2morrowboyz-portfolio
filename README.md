@@ -1,42 +1,40 @@
 # 2morrowboyz Portfolio
 
-A modern portfolio website crafted with **React**, **TypeScript**, **Tailwind CSS**, and **Vite**. This project showcases an interactive, responsive design to present personal projects, skills, and experiences. It features smooth navigation, animated sections, and optimized performance for a seamless user experience. The site demonstrates best practices in component architecture, state management, and styling with Tailwind, highlighting both technical proficiency and aesthetic sensibility.
+A modern portfolio website built with **React**, **TypeScript**, **Tailwind CSS**, and **Vite**. This site features animated sections, responsive design, and a modular component structure to showcase personal projects, skills, and experience.
 
 ## Demo
 
-You can view a live demo of this portfolio project here:
-
-[Live Demo Link](https://2morrowboyz-portfolio.netlify.app)
-
-Or see example screenshots below:
+[Live Demo](https://2morrowboyz-portfolio.netlify.app)
 
 ![Overview Website](src/assets/overview-website.jpg)
 
 ## Features
 
-- ⚡️ Fast development with Vite and HMR (Hot Module Replacement)
+- ⚡️ Fast development with Vite and HMR
 - 🛠️ TypeScript for type safety
-- 🧹 ESLint with recommended and type-aware rules
-- 📱 Responsive design with reusable components
-- ✨ Animated sections and smooth scrolling
-- 📦 Modular folder structure for scalability
+- 🎨 Tailwind CSS for rapid styling
+- 📱 Responsive and mobile-friendly design
+- ✨ Animated section reveals on scroll
+- 📦 Modular, scalable folder structure
+- 📬 Contact form with [EmailJS](https://www.emailjs.com/) integration
+- 🔔 Toast notifications with [sonner](https://sonner.emilkowal.ski/)
+- 🧹 ESLint and Prettier for code quality
 
 ## Project Structure
 
 ```
 src/
+  assets/           # Images and static assets
   components/
-    layouts/         # Navbar, Footer, MobileMenu
-    sections/        # Home, About, Projects, Contact, RevealOnScroll
-    shared/          # Loading, LoadingScreen
-    lib/             # Utilities
+    layouts/        # Navbar, Footer, MobileMenu
+    sections/       # Home, About, Projects, Contact, RevealOnScroll
+    shared/         # Loading, LoadingScreen
     components/
-      ui/            # UI utilities (e.g., sonner.tsx)
-  hooks/             # Custom React hooks (e.g., useInView)
-  utils/             # Common utilities and constants
-  assets/            # Images and SVGs
-public/              # Static files
-configs/             # Project configuration files
+      ui/           # UI utilities (pagination, button, sonner, etc.)
+    lib/            # Utility functions (e.g., cn)
+  hooks/            # Custom React hooks (e.g., useInView)
+  utils/            # Constants and helpers
+public/             # Static files (e.g., favicon)
 ```
 
 ## Getting Started
@@ -47,39 +45,55 @@ configs/             # Project configuration files
    npm install
    ```
 
-2. **Run the development server:**
+2. **Set up environment variables:**
+
+   Copy `.env.example` to `.env` and fill in your [EmailJS](https://www.emailjs.com/) credentials:
+
+   ```
+   VITE_EMAILJS_PUBLIC_KEY=yourkey
+   VITE_EMAILJS_SERVICE_ID=yourkey
+   VITE_EMAILJS_TEMPLATE_ID=yourkey
+   ```
+
+3. **Run the development server:**
 
    ```sh
    npm run dev
    ```
 
-3. **Build for production:**
+4. **Build for production:**
 
    ```sh
    npm run build
    ```
 
-4. **Preview the production build:**
+5. **Preview the production build:**
    ```sh
    npm run preview
    ```
 
 ## Linting & Formatting
 
-- ESLint is configured for both JavaScript and TypeScript, with recommended and type-aware rules.
-- To lint your code:
+- **Lint code:**
   ```sh
   npm run lint
   ```
+- **Formatting:**  
+  Prettier is configured with Tailwind plugin.
 
 ## Customization
 
-- Update content in `src/components/sections/` for each section of your portfolio.
-- Add or modify images in `src/assets/`.
-- UI utilities can be found in `src/components/components/ui/`.
-- Project configuration files are in `configs/`.
+- Update content in `src/components/sections/` for each section.
+- Add or replace images in `src/assets/`.
+- Adjust navigation links in [`src/utils/constant.ts`](src/utils/constant.ts).
+- Update styles in [`src/index.css`](src/index.css).
 
 ## Credits
 
-- Built with [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), and [Vite](https://vitejs.dev/).
-- Inspired by modern portfolio best practices.
+- Built with [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), and [Vite](https://vitejs.dev/).
+- Toast notifications by [sonner](https://sonner.emilkowal.ski/).
+- Icons by [lucide-react](https://lucide.dev/).
+
+---
+
+© All Rights Reserved
